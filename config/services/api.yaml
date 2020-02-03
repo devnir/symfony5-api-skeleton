@@ -1,0 +1,17 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  Api\:
+    resource: '../../src/Api/*'
+    exclude: '../../src/Api/{Controller, DTO, Mapping, Exception}'
+
+  Api\Controller\:
+    resource: '../../src/Api/Controller'
+    tags: ['controller.service_arguments']
+
+  Api\Mapping\:
+    resource: '../../src/Api/Mapping'
+    tags: ['automapper_plus.configurator']

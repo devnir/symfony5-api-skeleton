@@ -1,0 +1,6 @@
+parameters:
+    environment: '%env(APP_ENV)%'
+
+imports:
+    - { resource: services/api.yaml }
+    - { resource: services/app.yaml }
